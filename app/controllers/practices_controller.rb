@@ -9,8 +9,9 @@ class PracticesController < ApplicationController
 
   def new
     @practice = Practice.new 
-      visit = @practice.visits.build
-      visit.animals.build
+    visit = @practice.visits.build
+    visit.animals.build
+    @practice.build_address
 
   end
 
