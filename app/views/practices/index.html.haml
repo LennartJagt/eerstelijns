@@ -1,0 +1,12 @@
+- title "Practices"
+%table
+  %tr
+    %th Naam praktijk
+  
+  - for practice in @practices
+    %tr
+      %td= practice.name
+      %td= link_to "Show", practice
+      %td= link_to "Edit", edit_practice_path(practice)
+      %td= link_to "Destroy", practice, :confirm => 'Are you sure?', :method => :delete
+%p= link_to "New Practice", new_practice_path

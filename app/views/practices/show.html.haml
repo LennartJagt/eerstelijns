@@ -1,0 +1,24 @@
+- title "Practice"
+%p
+  %strong Naam praktijk:
+  = @practice.name
+  %br
+  %br
+  
+  -for visit in @practice.visits
+    %strong Datum bezoek:
+    = visit.date
+    %br
+    
+    - for animal in visit.animals
+      %strong Naam Dier
+      = animal.name
+      %strong Diersoort
+      = animal.specie 
+      %br
+    %br
+  
+%p
+  = link_to "Edit", edit_practice_path(@practice)
+  = link_to "Destroy", @practice, :confirm => 'Are you sure?', :method => :delete
+  = link_to "View All", practices_path

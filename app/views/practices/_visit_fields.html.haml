@@ -1,0 +1,13 @@
+.fields
+  %p
+    = f.label :date, "Datum bezoek"
+    = link_to_remove_fields "Verwijder", f 
+    %br
+    = f.date_select :date
+    
+    
+    
+  = f.fields_for :animals do |animal|
+    = render 'animal_fields', :f => animal
+    
+  = link_to_add_fields "Voeg dier toe", f, :animals

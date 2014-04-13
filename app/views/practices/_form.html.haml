@@ -1,0 +1,14 @@
+= form_for @practice do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+    
+  = f.fields_for :visits do |visit|
+    = render 'visit_fields', :f => visit
+  = link_to_add_fields "Voeg bezoek toe", f, :visits
+  %p= f.submit
+
+
+  
