@@ -1,4 +1,5 @@
 class Animal < ActiveRecord::Base
   belongs_to :visit
-  attr_accessible :name, :specie, :visit_id
+  has_many :activities
+  attr_accessible :name, :specie, :visit_id, :activities_attributes
 end

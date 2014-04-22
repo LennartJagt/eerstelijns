@@ -1,0 +1,14 @@
+- title "Onderzoek"
+%p
+  %strong Naam onderzoek:
+  = @activity.name
+  = @activity.price
+  %br
+  %br
+  
+  
+  
+%p
+  = link_to "Edit", edit_practice_path(@practice)
+  = link_to "Destroy", @practice, :confirm => 'Are you sure?', :method => :delete
+  = link_to "View All", practices_path

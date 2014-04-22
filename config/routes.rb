@@ -1,5 +1,7 @@
 Eerstelijns::Application.routes.draw do
   resources :practices
+  resources :visits, except: [:index, :show]
+  resources :activities
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
