@@ -2,13 +2,13 @@
 %p
   %strong Naam onderzoek:
   = @activity.name
+  %br
+  %strong Prijs
   = @activity.price
   %br
   %br
   
-  
-  
 %p
-  = link_to "Edit", edit_practice_path(@practice)
-  = link_to "Destroy", @practice, :confirm => 'Are you sure?', :method => :delete
-  = link_to "View All", practices_path
+  = link_to "Edit", edit_activity_path(@activity)
+  = link_to "Destroy", @activity, :confirm => 'Are you sure?', :method => :delete
+  = link_to "View All", activities_path

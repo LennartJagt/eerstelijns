@@ -1,7 +1,4 @@
 class VisitsController < ApplicationController
-  
-
-  
   def new
     @visit = Visit.new
     @visit.animals.build 

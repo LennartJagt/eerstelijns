@@ -1,0 +1,14 @@
+- title "Lijst Onderzoeken"
+%table
+  %tr
+    %th Naam onderzoek
+    %th Prijs
+  
+  - for activity in @activities
+    %tr
+      %td= activity.name
+      %td= activity.price
+      %td= link_to "Show", activity
+      %td= link_to "Edit", edit_activity_path(activity)
+      %td= link_to "Destroy", activity, :confirm => 'Are you sure?', :method => :delete
+%p= link_to "Nieuw onderzoek toevoegen", new_activity_path

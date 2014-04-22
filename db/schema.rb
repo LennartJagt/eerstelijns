@@ -11,12 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140420182318) do
+ActiveRecord::Schema.define(:version => 20140422183119) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
     t.decimal  "price",      :precision => 10, :scale => 0
-    t.integer  "animal_id"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
@@ -29,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20140420182318) do
     t.integer  "practice_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "animal_activities", :force => true do |t|
+    t.integer  "animal_id"
+    t.integer  "activity_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "animals", :force => true do |t|

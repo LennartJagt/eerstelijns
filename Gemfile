@@ -22,7 +22,7 @@ gem 'twitter-bootstrap-rails-confirm'
 gem 'bootstrap-will_paginate'
 gem "whenever", :require => false
 gem "gibbon"
-gem 'rmagick', '2.13.2'
+#gem 'rmagick', '2.13.2'
 
 gem 'rubyzip'
 gem 'nokogiri'
